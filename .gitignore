@@ -16,6 +16,8 @@ yarn-error.log*
 # Optional npm cache directory
 .npm
 
+package-lock.json
+
 # Optional eslint cache
 .eslintcache
 
@@ -27,6 +29,7 @@ coverage/
 
 # IDEs and editors
 /.idea
+*.iml
 .project
 .classpath
 .c9/
