@@ -2,6 +2,10 @@
   "name": "spawn-lord",
   "version": "0.0.1",
   "description": "Command line utility which helps to spawn processes",
+  "keywords": ["spawn", "exec"],
+  "repository": "https://github.com/sprilukin/spawn-lord",
+  "homepage": "https://github.com/sprilukin/spawn-lord",
+  "author": "Sergey Prilukin <sprilukin@gmail.com>",
   "bin": {
     "spawn": "bin/spawn"
   },
