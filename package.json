@@ -1,9 +1,9 @@
 {
-  "name": "breeder",
+  "name": "spawn-lord",
   "version": "0.0.1",
   "description": "Command line utility which helps to spawn processes",
   "bin": {
-    "breed": "bin/breed"
+    "spawn": "bin/spawn"
   },
   "dependencies": {
     "chalk": "^2.4.1",
