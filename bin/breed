@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+require('dotenv').config();
+
+const spawn = require("../spawn/spawn"),
+    getFolders = require("../folder/getFolders");
+
+const command = process.argv[2];
+const args = process.argv.slice(3);
+let folders = getFolders();
+
+spawn(command, args, folders);
+

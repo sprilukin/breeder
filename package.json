@@ -1,0 +1,15 @@
+{
+  "name": "breeder",
+  "version": "0.0.1",
+  "description": "Command line utility which helps to spawn processes",
+  "bin": {
+    "spawn-tools": "bin/breed"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "dotenv": "^5.0.1",
+    "minimist": "^1.2.0",
+    "moment": "^2.22.1",
+    "node-emoji": "^1.8.1"
+  }
+}
