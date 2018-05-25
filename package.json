@@ -2,18 +2,33 @@
   "name": "spawn-lord",
   "version": "0.0.1",
   "description": "Command line utility which helps to spawn processes",
-  "keywords": ["spawn", "exec"],
+  "keywords": [
+    "spawn",
+    "exec"
+  ],
   "repository": "https://github.com/sprilukin/spawn-lord",
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch & nodemon dist",
+    "test": "tsc && mocha dist/**/*.spec.js",
+    "lint": "eslint src --ext ts",
+    "tsc": "tsc"
+  },
   "bin": {
     "spawn": "bin/spawn"
   },
   "dependencies": {
+    "@types/node": "^10.1.2",
     "chalk": "^2.4.1",
     "dotenv": "^5.0.1",
     "minimist": "^1.2.0",
     "moment": "^2.22.1",
     "node-emoji": "^1.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3",
+    "typescript-eslint-parser": "^15.0.0"
   }
 }
