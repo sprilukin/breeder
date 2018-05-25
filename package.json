@@ -10,7 +10,7 @@
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
   "scripts": {
-    "install": "node_modules/typescript/bin/tsc",
+    "postinstall": "node_modules/typescript/bin/tsc",
     "build": "node_modules/typescript/bin/tsc",
     "test": "node_modules/typescript/bin/tsc && mocha dist/**/*.spec.js",
     "lint": "node_modules/eslint/bin/eslint src --ext ts",
