@@ -1,23 +1,24 @@
-const LogEntryTypes = require("./LogEntryTypes");
+import LogEntry from "./LogEntry";
 
 class MemoryLogAdapter {
 
+    private _memo: Array<any> = [];
+    private _exitcode: Number = -1;
+
     constructor() {
-        this._memo = [];
-        this._exitcode = null;
     }
 
     onStdout(data) {
         this._memo.push({
             data: data,
-            type: LogEntryTypes.STDOUT
+            type: LogEntry.Stdout
         });
     }
 
     onStderr(data) {
         this._memo.push({
             data: data,
-            type: LogEntryTypes.STDERR
+            type: LogEntry.Stderr
         });
     }
 
@@ -26,14 +27,13 @@ class MemoryLogAdapter {
     }
 
 
-    get memo() {
+    get memo(): Array<any> {
         return this._memo;
     }
 
-
-    get exitcode() {
+    get exitcode(): Number {
         return this._exitcode;
     }
 }
 
-module.exports = MemoryLogAdapter;
+export default MemoryLogAdapter;

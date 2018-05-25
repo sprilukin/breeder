@@ -1,7 +1,7 @@
-const readdir = require("./readdir");
-const emoji = require('node-emoji');
-const chalk = require("chalk");
-const path = require('path');
+import readdir from "./readdir";
+import emoji from 'node-emoji';
+import chalk from "chalk";
+import {resolve} from 'path';
 
 function resolveFolders(folders, cwd) {
     cwd = cwd || process.cwd();
@@ -9,12 +9,12 @@ function resolveFolders(folders, cwd) {
     return folders.map(folder => {
         return {
             name: folder,
-            path: path.resolve(cwd, folder)
+            path: resolve(cwd, folder)
         }
     });
 }
 
-module.exports = function (cwd) {
+export default function (cwd) {
     cwd = cwd || process.cwd();
 
     const spawnFolders = process.env.SPAWN_FOLDERS && process.env.SPAWN_FOLDERS.split(",");

@@ -1,4 +1,4 @@
-let spawnAdapter = require("./spawnAdapter");
+import spawnAdapter from "./spawnAdapter";
 
 function logOnSpawnedProcess(spawned, promise, log) {
     spawned.stdout.on('data', log.onStdout.bind(log));
@@ -30,7 +30,7 @@ function spawnInPromise(options) {
     logOnSpawnedProcess(spawned, deferred, log);
 }
 
-module.exports = function(options) {
+export default function(options) {
     return new Promise(function (resolve, reject) {
         let deferred = {resolve: resolve, reject: reject};
 

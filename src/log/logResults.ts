@@ -1,9 +1,9 @@
-const emoji = require('node-emoji'),
-    chalk = require("chalk");
+import emoji from 'node-emoji';
+import chalk from "chalk";
 
 require('dotenv').config();
 
-module.exports = function(result) {
+export default function (result) {
     result.forEach(folder => {
         let time = emoji.get("hourglass_flowing_sand");
 

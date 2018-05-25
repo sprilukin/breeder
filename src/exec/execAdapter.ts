@@ -1,5 +1,5 @@
-const { exec } = require('child_process');
+import { exec } from 'child_process';
 
-module.exports = function (command, args, options) {
+export default function (command, args, options) {
     return exec(command, options);
 };

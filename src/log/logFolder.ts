@@ -1,5 +1,6 @@
-const chalk = require('chalk'),
-    log = console.log;
+import chalk from 'chalk';
+
+let log = console.log;
 
 function dataToString(data) {
     if (data instanceof Buffer) {
@@ -9,7 +10,7 @@ function dataToString(data) {
     }
 }
 
-function logFolder(folder, logEntriesContainer) {
+export default function (folder, logEntriesContainer) {
     let logEntries = logEntriesContainer.memo;
 
     if (logEntries.length > 0) {
@@ -23,6 +24,4 @@ function logFolder(folder, logEntriesContainer) {
             log(chalk`{red ${dataToString(entry.data)}}`);
         }
     });
-}
-
-module.exports = logFolder;
+};

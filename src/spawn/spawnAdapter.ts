@@ -1,5 +1,5 @@
-const { spawn } = require('child_process');
+import { spawn } from 'child_process';
 
-module.exports = function (command, args, options) {
+export default function (command, args, options) {
     return spawn(command, args, options);
 };

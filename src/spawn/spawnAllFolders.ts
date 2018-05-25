@@ -1,9 +1,9 @@
-const emoji = require('node-emoji'),
-    chalk = require("chalk"),
-    spawnCommand = require("./spawnCommand"),
-    Timer = require("../time/timer"),
-    logFolder = require("../log/logFolder"),
-    MemoryLogAdapter = require("../log/MemoryLogAdapter");
+import emoji from 'node-emoji';
+import chalk from "chalk";
+import spawnCommand from "./spawnCommand";
+import Timer from "../time/timer";
+import logFolder from "../log/logFolder";
+import MemoryLogAdapter from "../log/MemoryLogAdapter";
 
 function done(folder, timer, log) {
     timer.stop();
@@ -18,7 +18,7 @@ function done(folder, timer, log) {
     };
 }
 
-module.exports = function (spawnopts, folders) {
+export default function (spawnopts, folders) {
     const allPromises = [];
 
     let orange = chalk.keyword('orange');

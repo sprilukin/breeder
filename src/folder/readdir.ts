@@ -1,5 +1,5 @@
-const { lstatSync, readdirSync } = require('fs');
-const { join } = require('path');
+import {lstatSync, readdirSync} from 'fs';
+import {join} from 'path';
 
 const SKIP_FOLDERS = [
     /^\./g
@@ -18,7 +18,7 @@ function isNotIgnored(source) {
 }
 
 
-module.exports = function(parentFolder) {
+export default function (parentFolder) {
     return readdirSync(parentFolder)
         .filter(isNotIgnored)
         .filter(isDirectory.bind(null, parentFolder));

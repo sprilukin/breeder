@@ -1,12 +1,12 @@
-const emoji = require('node-emoji'),
-    chalk = require("chalk"),
-    Timer = require("../time/timer"),
-    logResults = require("../log/logResults"),
-    spawnAllFolders = require("./spawnAllFolders");
+import emoji from 'node-emoji';
+import chalk from "chalk";
+import Timer from "../time/timer";
+import logResults from "../log/logResults";
+import spawnAllFolders from "./spawnAllFolders";
 
 require('dotenv').config();
 
-module.exports = function(command, args, folders) {
+export default function (command, args, folders) {
     let timer = new Timer();
 
     let loader = setInterval(function () {

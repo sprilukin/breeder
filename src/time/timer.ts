@@ -1,6 +1,8 @@
-const moment = require("moment");
+import * as moment from "moment";
 
 class Timer {
+    _start: number;
+    _end: number;
 
     constructor() {
         this._start = Date.now();
@@ -54,4 +56,4 @@ class Timer {
     }
 }
 
-module.exports = Timer;
+export default Timer;

@@ -10,11 +10,10 @@
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch & nodemon dist",
-    "test": "tsc && mocha dist/**/*.spec.js",
-    "lint": "eslint src --ext ts",
-    "tsc": "tsc"
+    "build": "node_modules/typescript/bin/tsc",
+    "test": "node_modules/typescript/bin/tsc && mocha dist/**/*.spec.js",
+    "lint": "node_modules/eslint/bin/eslint src --ext ts",
+    "tsc": "node_modules/typescript/bin/tsc"
   },
   "bin": {
     "spawn": "bin/spawn"
@@ -28,6 +27,11 @@
     "node-emoji": "^1.8.1"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-promise": "^3.8.0",
+    "mocha": "^5.2.0",
     "typescript": "^2.8.3",
     "typescript-eslint-parser": "^15.0.0"
   }
