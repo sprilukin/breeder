@@ -10,11 +10,11 @@
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
   "scripts": {
-    "install": "node_modules/bin/tsc",
-    "build": "node_modules/bin/tsc",
-    "test": "node_modules/bin/tsc && mocha dist/**/*.spec.js",
-    "lint": "node_modules/bin/eslint src --ext ts",
-    "tsc": "node_modules/bin/tsc"
+    "install": "node_modules/.bin/tsc",
+    "build": "node_modules/.bin/tsc",
+    "test": "node_modules/.bin/tsc && node_modules/.bin/mocha dist/**/*.spec.js",
+    "lint": "node_modules/.bin/eslint src --ext ts",
+    "tsc": "node_modules/.bin/tsc"
   },
   "bin": {
     "spawn": "bin/spawn"
