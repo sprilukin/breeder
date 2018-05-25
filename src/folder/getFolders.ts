@@ -1,5 +1,5 @@
 import readdir from "./readdir";
-import emoji from 'node-emoji';
+import * as emoji from 'node-emoji';
 import chalk from "chalk";
 import {resolve} from 'path';
 

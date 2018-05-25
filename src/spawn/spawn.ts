@@ -1,4 +1,4 @@
-import emoji from 'node-emoji';
+import * as emoji from 'node-emoji';
 import chalk from "chalk";
 import Timer from "../time/timer";
 import logResults from "../log/logResults";

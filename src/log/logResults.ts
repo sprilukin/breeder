@@ -1,4 +1,4 @@
-import emoji from 'node-emoji';
+import * as emoji from 'node-emoji';
 import chalk from "chalk";
 
 require('dotenv').config();

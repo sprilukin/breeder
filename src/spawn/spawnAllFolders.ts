@@ -1,4 +1,4 @@
-import emoji from 'node-emoji';
+import * as emoji from 'node-emoji';
 import chalk from "chalk";
 import spawnCommand from "./spawnCommand";
 import Timer from "../time/timer";
