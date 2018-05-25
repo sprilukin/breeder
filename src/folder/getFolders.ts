@@ -14,7 +14,7 @@ function resolveFolders(folders, cwd) {
     });
 }
 
-export default function (cwd) {
+export function getFolders(cwd) {
     cwd = cwd || process.cwd();
 
     const spawnFolders = process.env.SPAWN_FOLDERS && process.env.SPAWN_FOLDERS.split(",");
@@ -41,4 +41,4 @@ export default function (cwd) {
     console.log(emoji.get("cyclone"), chalk.yellow("folders: "), chalk.blue(`[${folders.join(",")}]`));
 
     return resolvedFolders;
-};
+}

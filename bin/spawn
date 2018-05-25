@@ -4,8 +4,8 @@
 
 require('dotenv').config();
 
-const spawn = require('../dist/spawn/spawn').default;
-const getFolders = require('../dist/folder/getFolders').default;
+const {spawn} = require('../dist/spawn/spawn');
+const {getFolders} = require('../dist/folder/getFolders');
 
 const command = process.argv[2];
 const args = process.argv.slice(3);

@@ -4,9 +4,7 @@ import Timer from "../time/timer";
 import logResults from "../log/logResults";
 import spawnAllFolders from "./spawnAllFolders";
 
-require('dotenv').config();
-
-export default function (command, args, folders) {
+export function spawn(command, args, folders) {
     let timer = new Timer();
 
     let loader = setInterval(function () {
@@ -25,4 +23,4 @@ export default function (command, args, folders) {
 
         console.log(emoji.get("rainbow"), magenta(chalk.underline("All done!")), emoji.get("hourglass_flowing_sand"), chalk.yellow(timer.format()));
     });
-};
+}
