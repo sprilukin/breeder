@@ -9,6 +9,6 @@ describe('add', function () {
         const result = add(1, 2);
 
         //THEN
-        expect(result).to.equal(2, "should equal to 3");
+        expect(result).to.equal(3, "should equal to 3");
     });
 });
