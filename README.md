@@ -1,5 +1,5 @@
 # spawn-lord
-Command line utility which helps to spawn processes
+Command line utility for hipsters 👓 which helps to to automate parallel execution of same command in different folders 
 
 ## installation
 `npm install -g spawn-lord`
@@ -21,4 +21,6 @@ cd /folder
 spawn git fetch
 ```
 
-`git fetch` will be spawned and executed in parallel in all folders under current working folder.
+`git fetch` will be spawned and executed in parallel in all folders under current working folder:
+
+![Workflow example](./help/workflow-example.gif)
