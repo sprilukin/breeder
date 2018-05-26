@@ -1,7 +1,7 @@
 {
   "name": "spawn-lord",
-  "version": "0.0.1",
-  "description": "Command line utility which helps to spawn processes",
+  "version": "0.0.2",
+  "description": "Command line utility for parallel command execution",
   "keywords": [
     "spawn",
     "exec"
