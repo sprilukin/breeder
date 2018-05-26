@@ -6,6 +6,7 @@
     "spawn",
     "exec"
   ],
+  "license" : "MIT",
   "repository": "https://github.com/sprilukin/spawn-lord",
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
