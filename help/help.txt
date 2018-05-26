@@ -1,0 +1,23 @@
+usage: spawn <command> [<args>]
+
+where `<command>` is any command and `<args>` it's arguments.
+
+NOTE:
+    that only single command with it's arguments is allowed,
+    you can not use *shell* features like `&&` or `|`
+
+example:
+assuming you have the following folders structure:
+
+/folder
+  |-/project1 //git-based project
+  |-/project2 //also git-based project
+
+
+Lets say you want to call `git fetch` in both project1 and project2 folders
+You can achieve this by calling the following command:
+
+cd /folder
+spawn git fetch
+
+git fetch will be spawned and executed in parallel in all folders under current working folder.

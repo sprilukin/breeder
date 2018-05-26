@@ -5,11 +5,11 @@ Command line utility for hipsters 👓 which helps to automate parallel executio
 `npm install -g spawn-lord`
 
 ## Usage 
-`spawn <command>`
+`spawn <command> [<args>]`
 
-where `<command>` is any command with it's params.
+where `<command>` is any command and `<args>` it's arguments.
 
-**NOTE** that only single command with params is allowed, you can not use *shell* features like `&&` or `|`
+**NOTE** that only single command with it's arguments is allowed, you can not use *shell* features like `&&` or `|`
 
  
 ## Example
@@ -21,7 +21,7 @@ assuming you have the following folders structure:
   |-/project2 //also git-based project
 ```
 
-Lets say you want to call `git fetch` in both **project1** and **project2**.
+Lets say you want to call `git fetch` in both **project1** and **project2** folders.
 You can achieve this by calling the following command:
 
 ```sh
