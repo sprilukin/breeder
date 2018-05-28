@@ -14,8 +14,7 @@ function resolveFolders(folders, cwd) {
     });
 }
 
-export function getFolders(cwd) {
-    cwd = cwd || process.cwd();
+export function getFolders(cwd = process.cwd()) {
 
     const spawnFolders = process.env.SPAWN_FOLDERS && process.env.SPAWN_FOLDERS.split(",");
     const spawnExcept = process.env.SPAWN_EXCEPT && process.env.SPAWN_EXCEPT.split(",");

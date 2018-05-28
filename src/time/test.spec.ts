@@ -1,5 +1,6 @@
 import {add} from "./test";
 import {expect} from "chai";
+import {} from "mocha";
 
 describe('add', function () {
     it("should add two numbers", function () {

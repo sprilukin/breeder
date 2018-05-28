@@ -6,7 +6,7 @@
     "spawn",
     "exec"
   ],
-  "license" : "MIT",
+  "license": "MIT",
   "repository": "https://github.com/sprilukin/spawn-lord",
   "homepage": "https://github.com/sprilukin/spawn-lord",
   "author": "Sergey Prilukin <sprilukin@gmail.com>",
@@ -24,9 +24,11 @@
     "@types/node": "^10.1.2",
     "chalk": "^2.4.1",
     "dotenv": "^5.0.1",
+    "inversify": "^4.13.0",
     "minimist": "^1.2.0",
     "moment": "^2.22.1",
     "node-emoji": "^1.8.1",
+    "reflect-metadata": "^0.1.12",
     "typescript": "^2.8.3"
   },
   "devDependencies": {
