@@ -1,7 +1,7 @@
 import * as moment from "moment";
-import Timer1 from "./Timer1";
+import Timer from "./Timer";
 
-class DefaultTimer implements Timer1 {
+class DefaultTimer implements Timer {
     _start: number;
     _end: number;
 

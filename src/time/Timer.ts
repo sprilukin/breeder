@@ -1,4 +1,4 @@
-interface Timer1 {
+interface Timer {
     stop(): void,
 
     format(): string,
@@ -10,4 +10,4 @@ interface Timer1 {
     diff(): number
 }
 
-export default Timer1;
+export default Timer;
