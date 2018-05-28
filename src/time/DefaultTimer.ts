@@ -1,11 +1,12 @@
 import * as moment from "moment";
+import Timer1 from "./Timer1";
 
-class Timer {
+class DefaultTimer implements Timer1 {
     _start: number;
     _end: number;
 
-    constructor() {
-        this._start = Date.now();
+    constructor(start = Date.now()) {
+        this._start = start;
         this._end = null;
     }
 
@@ -39,11 +40,11 @@ class Timer {
         return format;
     }
 
-    get start() {
+    start() {
         return this._start;
     }
 
-    get end() {
+    end() {
         this.stop();
 
         return this._end;
@@ -56,4 +57,4 @@ class Timer {
     }
 }
 
-export default Timer;
+export default DefaultTimer;

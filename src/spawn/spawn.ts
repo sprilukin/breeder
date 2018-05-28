@@ -1,11 +1,11 @@
 import * as emoji from 'node-emoji';
 import chalk from "chalk";
-import Timer from "../time/timer";
+import DefaultTimer from "../time/DefaultTimer";
 import logResults from "../log/logResults";
 import spawnAllFolders from "./spawnAllFolders";
 
 export function spawn(command, args, folders) {
-    let timer = new Timer();
+    let timer = new DefaultTimer();
 
     let loader = setInterval(function () {
         console.log(".");
