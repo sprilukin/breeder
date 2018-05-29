@@ -1,6 +1,6 @@
 import DefaultTimer from "./DefaultTimer";
 import {expect} from "chai";
-import {} from "mocha";
+import {describe, it} from "mocha";
 import * as sinon from "sinon";
 
 describe('DefaultTimer', function () {
