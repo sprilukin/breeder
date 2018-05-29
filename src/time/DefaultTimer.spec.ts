@@ -3,7 +3,7 @@ import {expect} from "chai";
 import {} from "mocha";
 import * as sinon from "sinon";
 
-describe('format', function () {
+describe('DefaultTimer', function () {
     const sandbox = sinon.createSandbox();
     let dateNowStub;
 
@@ -15,17 +15,61 @@ describe('format', function () {
         sandbox.restore();
     });
 
-    it("should format time diff as a '[H]h [M]m [S]s'", function () {
-        //GIVEN
-        dateNowStub.onCall(0).returns(10000);
-        dateNowStub.onCall(1).returns(20000000);
+    describe('format', function () {
+        it("should format time diff as a '[H]h [M]m [S]s'", function () {
+            //GIVEN
+            dateNowStub.onCall(0).returns(0);
+            dateNowStub.onCall(1).returns(3661000);
 
-        const timer = new DefaultTimer();
+            const timer = new DefaultTimer();
 
-        //WHEN
-        const result = timer.format();
+            //WHEN
+            const result = timer.format();
 
-        //THEN
-        expect(result).to.equal("5h 33m 10s");
+            //THEN
+            expect(result).to.equal("1h 1m 1s");
+        });
+
+        it("should format time diff as a '[M]m [S]s'", function () {
+            //GIVEN
+            dateNowStub.onCall(0).returns(0);
+            dateNowStub.onCall(1).returns(3050000);
+
+            const timer = new DefaultTimer();
+
+            //WHEN
+            const result = timer.format();
+
+            //THEN
+            expect(result).to.equal("50m 50s");
+        });
+
+        it("should format time diff as a '[S]s'", function () {
+            //GIVEN
+            dateNowStub.onCall(0).returns(0);
+            dateNowStub.onCall(1).returns(59000);
+
+            const timer = new DefaultTimer();
+
+            //WHEN
+            const result = timer.format();
+
+            //THEN
+            expect(result).to.equal("59s");
+        });
+
+        it("should format time diff as a '[S]s'", function () {
+            //GIVEN
+            dateNowStub.onCall(0).returns(0);
+            dateNowStub.onCall(1).returns(0);
+
+            const timer = new DefaultTimer();
+
+            //WHEN
+            const result = timer.format();
+
+            //THEN
+            expect(result).to.equal("0s");
+        });
     });
 });
